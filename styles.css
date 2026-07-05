@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* Base Colors */
+    --color-background: #34312D;
+    --color-surface: #FFFFFF;
+
+    /* Text */
+    --color-text-primary: #FFFFFF;
+    --color-text-dark: #34312D;
+    --color-text-secondary: #7A93AC;
+
+    /* Brand / Accent */
+    --color-primary: #DE9151;
+    --color-secondary: #7A93AC;
+    --color-success: #99C24D;
+}
+
+body{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.app-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+@keyframes shakeX {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-8px); }
+    40% { transform: translateX(8px); }
+    60% { transform: translateX(-6px); }
+    80% { transform: translateX(6px); }
+    100% { transform: translateX(0); }
+}
+
+
+/*search =======================================================================================================================================*/
+
+.main{
+    background-color: var(--color-surface);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.7s ease;
+}
+
+.main.active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;
+    height: 100vh;
+}
+
+#input{
+    background-color: var(--color-background);
+    margin-top: 20px;
+    color: var(--color-text-primary);
+    border-radius: 100px;
+    width: 450px;
+    padding: 15px 20px;
+    border: none;
+    font-size: 16px;
+    transition: all 0.7s ease;
+}
+
+.main.active #input{
+    margin-left: 45px;
+}
+
+#input::placeholder {
+    color: var(--color-text-secondary);
+}
+
+#search{
+    padding: 10px;
+    color: var(--color-text-primary);
+    font-size: 16px;
+    border-radius: 100px;
+    position: relative;
+    right: 50px;
+    transition: all 0.3s ease;
+}
+
+#search:hover{
+    padding: 10px;
+    border-radius: 100px;
+    background-color: var(--color-text-secondary);
+}
+
+.place-holder-text{
+    color: var(--color-text-dark);
+    font-family: "Edu NSW ACT Cursive", cursive;
+    margin-top: 30vh;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.place-holder-text.error{
+    color: var(--color-primary);
+    font-family: "Edu NSW ACT Cursive", cursive;
+    margin-top: 30vh;
+    text-align: center;
+    margin-right: 20px;
+    animation: shakeX 0.7s ease-in-out;
+}
+
+.main.active .place-holder-text{
+    margin-left: 45px;
+}
+
+.main-content p{
+    color: var(--color-text-dark);
+    font-family: "DM Sans", sans-serif;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.main.active .main-content p{
+    margin-left: 45px;
+}
+/*results =======================================================================================================================================*/
+
+
+.results{
+    height: 100vh;
+    width: 70vw;
+    background-color: var(--color-background);
+    position: absolute;
+    transform: translateX(1940px);
+    border-radius: 20px;
+    transition: all 0.7s ease;
+}
+
+.results.active{
+    transform: translateX(620px);
+}
+
+.close-menu-btn{
+    background:transparent;
+    padding: 10px 20px;
+    color: var(--color-text-primary);
+    border: none;
+    border-radius: 100px;
+    transition: all 0.3s ease;
+}
+
+.close-menu-btn:hover{
+    background-color: var(--color-text-secondary);
+}
+
+.name-display{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: var(--color-text-primary);
+    margin:20px 95px;
+    font-size: 24px;
+}
+
+.name-display span{
+    color:var(--color-text-secondary);
+}
+
+.result-wrapper{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    width:fit-content;
+    margin: 0 auto;
+    gap: 50px 130px;
+}
+
+.result-content-wrapper{
+    width: 300px;
+    height:200px;
+    background-color: var(--color-secondary);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.result-title{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: var(--color-text-primary);
+    margin: 20px 0 0 20px;
+    font-size: 18px;
+}
+
+.result-content{
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300;
+    color: var(--color-text-primary);
+    margin: 10px 0 0 20px;
+    font-size: 34px;
+}
+
+.arrow{
+    position: absolute;
+    height: 20px;
+    bottom: 20px;
+    margin:20px 95px;
+    background-color: var(--color-text-primary);
+    border-radius: 100px;
+    padding: 10px;
+}
+
+.arrow.active{
+    position: absolute;
+    height: 20px;
+    bottom: 20px;
+    margin:20px 95px;
+    background-color: var(--color-text-primary);
+    border-radius: 100px;
+    padding: 10px;
+}
