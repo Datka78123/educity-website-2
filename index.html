@@ -1,37 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <title>API</title>
-</head>
-<body>
-    <div class="app-wrapper">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <title>API</title>
+    </head>
+    <body>
+        <div class="app-wrapper">
+            <div class="main">
+                <div class="shearch-bar">
+                    <input type="text" id="input" placeholder="Location" />
+                    <i class="fa-solid fa-magnifying-glass" id="search"></i>
+                </div>
+                <div class="active-mainside">
 
-        <div class="main">
-            
-            <div class="shearch-bar">
-                <input type="text" id="input" placeholder="Location">
-                <i class="fa-solid fa-magnifying-glass" id="search"></i>
+                </div>
+                <div class="main-content">
+                    <h2 class="place-holder-text">Search For City to Start</h2>
+                    <p>Made by David</p>
+                </div>
             </div>
-            <div class="main-content">
-                <h2 class="place-holder-text">Search For City to Start</h2>
-                <p>Made by David</p>
+
+            <div class="results">
+                <p class="name-display">
+                    City: <span class="city-name-display"></span>
+                </p>
+                <div class="result-wrapper">
+
+
+                    <div class="result-content-wrapper">
+                        <p class="result-title">temp</p>
+                        <p class="result-content">21</p>
+                    </div>
+                    <div class="result-content-wrapper">
+                        <p class="result-title">temp</p>
+                        <p class="result-content">21</p>
+                    </div>
+                    <div class="result-content-wrapper">
+                        <p class="result-title">temp</p>
+                        <p class="result-content">21</p>
+                    </div>
+                    <div class="result-content-wrapper">
+                        <p class="result-title">temp</p>
+                        <p class="result-content">21</p>
+                    </div>
+                    <div class="result-content-wrapper">
+                        <p class="result-title">temp</p>
+                        <p class="result-content">21</p>
+                    </div>
+                    <div class="result-content-wrapper">
+                        <p class="result-title">temp</p>
+                        <p class="result-content">21</p>
+                    </div>
+                    <div class="result-content-wrapper">
+                        <p class="result-title">temp</p>
+                        <p class="result-content">21</p>
+                    </div>
+                    <div class="result-content-wrapper">
+                        <p class="result-title">temp</p>
+                        <p class="result-content">21</p>
+                    </div>
+                    <div class="result-content-wrapper">
+                        <p class="result-title">temp</p>
+                        <p class="result-content">21</p>
+                    </div>
+
+                </div>
+
+                <div class="bottom-bar-wrapper">
+                    <button class="new-shearch">Shearch for <span>New Place</span></button>
+                    <button class="closer-btn">Close Side Bar</button>
+                </div>
             </div>
         </div>
-
-        <div class="results">            
-            <p class='name-display'>City: <span>Tbilisi</span> </p>
-
-
-            <div class="result-wrapper">
-            </div>
-        </div>
-    </div>
-<script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
-
-<!-- <button class="close-menu-btn">X</button> -->
